@@ -41,8 +41,8 @@ public class MainMenu {
 //      deleteById();
 //        update();
  //       registerMedicine();
-      // registerPatient();
-   //    registerItem();
+      //  registerPatient();
+      //  registerItem();
       //  registerPrescription();
         listOfPrescription();
     }
