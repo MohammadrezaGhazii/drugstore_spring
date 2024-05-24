@@ -44,7 +44,7 @@ public class MainMenu {
       //  registerPatient();
       //  registerItem();
       //  registerPrescription();
-        listOfPrescription();
+         listOfPrescription();
     }
 
     private void listOfPrescription() {
