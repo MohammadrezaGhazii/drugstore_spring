@@ -45,4 +45,21 @@ public class AdminService {
             log.warn(e.getMessage());
         }
     }
+
+    public void update(Admin admin , Long id) {
+        Optional<Admin> optionalAdmin = adminRepository.findById(id);
+        try {
+            optionalAdmin.orElseThrow(
+                    () -> new NotFoundEntityException(String.format("admin with id : %s not found" , id ))
+            );
+            Admin foundAdmin = optionalAdmin.get();
+            Optional.ofNullable(admin.getLastName()).ifPresent(foundAdmin::setLastName);
+            Optional.ofNullable(admin.getPassword()).ifPresent(foundAdmin::setPassword);
+            Admin savedAdmin = adminRepository.save(foundAdmin);
+            log.info("Admin has been updated : {}" , savedAdmin);
+        }
+        catch (NotFoundEntityException e){
+            log.warn(e.getMessage());
+        }
+    }
 }
