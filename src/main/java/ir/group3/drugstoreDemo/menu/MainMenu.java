@@ -37,13 +37,18 @@ public class MainMenu {
 
     @PostConstruct
     public void runTest(){
-//        registerAdmin();
-//        deleteById();
+     //  registerAdmin();
+//      deleteById();
 //        update();
-//        registerMedicine();
-//        registerPatient();
-        registerItem();
-//        registerPrescription();
+ //       registerMedicine();
+      // registerPatient();
+   //    registerItem();
+      //  registerPrescription();
+        listOfPrescription();
+    }
+
+    private void listOfPrescription() {
+       // prescriptionService.listOfPrescription();
     }
 
     private void registerPrescription() {
@@ -83,8 +88,8 @@ public class MainMenu {
     private void registerMedicine() {
         Medicine medicine = Medicine
                 .builder()
-                .medicineName("jelofen")
-                .price(BigDecimal.valueOf(50000L))
+                .medicineName("staminofen")
+                .price(BigDecimal.valueOf(40000L))
                 .inventory(200)
                 .doesExist(Boolean.TRUE)
                 .build();
