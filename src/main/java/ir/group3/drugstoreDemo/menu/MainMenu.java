@@ -27,7 +27,11 @@ public class MainMenu {
     public void runTest(){
 //        registerAdmin();
 //        deleteById();
-        update();
+//        update();
+        registerMedicine();
+    }
+
+    private void registerMedicine() {
     }
 
     private void update() {
