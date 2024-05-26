@@ -40,7 +40,7 @@ public class MainMenu {
      //  registerAdmin();
 //      deleteById();
 //        update();
- //       registerMedicine();
+ //     registerMedicine();
       //  registerPatient();
       //  registerItem();
       //  registerPrescription();
