@@ -7,6 +7,7 @@ import ir.group3.drugstoreDemo.repository.PrescriptionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -38,5 +39,11 @@ public class PrescriptionService {
             log.warn(e.getMessage());
             return null;
         }
+    }
+
+    public List<PrescriptionDTO> listOfPrescription() {
+        List<PrescriptionDTO> allByConfirmNullAndTotalPriceNull = prescriptionRepository.findAllByConfirmNullAndTotalPriceNull();
+        return allByConfirmNullAndTotalPriceNull;
+
     }
 }

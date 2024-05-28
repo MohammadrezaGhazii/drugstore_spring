@@ -37,18 +37,19 @@ public class MainMenu {
 
     @PostConstruct
     public void runTest(){
-     //  registerAdmin();
+//       registerAdmin();
 //      deleteById();
 //        update();
- //     registerMedicine();
-      //  registerPatient();
-      //  registerItem();
-      //  registerPrescription();
+//      registerMedicine();
+//        registerPatient();
+//          registerPrescription();
+//        registerItem();
           listOfPrescription();
     }
 
     private void listOfPrescription() {
-       // prescriptionService.listOfPrescription();
+        List<PrescriptionDTO> prescriptionDTOList = prescriptionService.listOfPrescription();
+        prescriptionDTOList.forEach(System.out::println);
     }
 
     private void registerPrescription() {
@@ -88,8 +89,8 @@ public class MainMenu {
     private void registerMedicine() {
         Medicine medicine = Medicine
                 .builder()
-                .medicineName("staminofen")
-                .price(BigDecimal.valueOf(40000L))
+                .medicineName("zhelofen")
+                .price(BigDecimal.valueOf(80000L))
                 .inventory(200)
                 .doesExist(Boolean.TRUE)
                 .build();
